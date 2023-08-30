@@ -23,7 +23,7 @@ conda install -c bioconda minimap2
 In some specific systems, you may need to install python3 separately.
 
 ## 2. Input File Preparation
-Liftoff takes 3 input files. They are: **Targeted unannotated FASTA file**, **reference genome FASTA file** (from closed-related species), and **reference annotation GFF3 file**. The reference annotation can be in different form include but not limited to gene annotation, cds annotation, exons annotation, etc.
+Liftoff takes 3 input files. They are: **Target unannotated FASTA file**, **reference genome FASTA file** (from closed-related species), and **reference annotation GFF3 file**. The reference annotation can be in different form include but not limited to gene annotation, cds annotation, exons annotation, etc.
 
 ## 3. Sample Run
 Here is a example for using the liftoff to run a homologous annotation pipeline. We planned to annotate our genome assembly of *Salix exigua* male assembly. Instead of de novo annotation of our genome assembly, *S. purpurea* was selected for homologous annotation due to its well established transcriptome data.
@@ -31,7 +31,7 @@ Here is a example for using the liftoff to run a homologous annotation pipeline.
 Reference genome and annotation could be found on Phytozome (JGI) under "*Salix purpurea* v5.1". 
 
 The prepared files are listed below:
-1. Targeted unannotated FASTA file: SE20220629_main_sorted.fasta
+1. Target unannotated FASTA file: SE20220629_main_sorted.fasta
 2. Reference genome FASTA file: Spurpurea_519_v5.0.fa
 3. Reference annotation GFF3 file: Spurpurea_519_v5.1.gene_exons.gff3
 > We choose the GFF3 file for only the annotated exons but there are several other choices.
@@ -58,6 +58,7 @@ liftoff -g ./Spurpurea_519_v5.1.gene_exons.gff3 \
         ./Spurpurea_519_v5.0.fa
 ```
 As shown above, `-g` refers to the GFF3 file, `-dir` refers to the working directory, `-o` refers to the output GFF3 file, which is the homologous annotation for the *S. exigua*. This step for a genome assemble around 350M takes about 40min-1h long running on a node requesting 64 CPU cores.
+> There are several other mode and parameters for runnig liftoff. Additionally, they offer a "polishing" step to increase the accuracy of the annotation.
 
 Here is a sample view of the results:
 | seqid 	| source  	| type            	| start 	| end   	| score 	| strand 	| phase 	| attributes                                                                                                                                                                                     	|

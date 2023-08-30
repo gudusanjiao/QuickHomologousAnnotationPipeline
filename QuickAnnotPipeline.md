@@ -78,3 +78,5 @@ Here is a sample view of the results:
 | Chr01 	| Liftoff 	| CDS             	| 89564 	| 91827 	| .     	| -      	| .     	| ID=Sapur.001G017200.1.v5.1.CDS.1;Parent=Sapur.001G017200.1.v5.1;pacid=41821970;extra_copy_number=0                                                                                             	|
 | Chr01 	| Liftoff 	| gene            	| 90784 	| 98993 	| .     	| +      	| .     	| ID=Sapur.001G016900.v5.1;Name=Sapur.001G016900;coverage=0.998;sequence_ID=0.693;valid_ORFs=0;extra_copy_number=0;copy_num_ID=Sapur.001G016900.v5.1_0                                           	|
 | Chr01 	| Liftoff 	| mRNA            	| 90784 	| 98993 	| .     	| +      	| .     	| ID=Sapur.001G016900.1.v5.1;Name=Sapur.001G016900.1;pacid=41822040;longest=1;Parent=Sapur.001G016900.v5.1;matches_ref_protein=False;valid_ORF=False;missing_stop_codon=True;extra_copy_number=0 	|
+
+This dataset would be useful for downstream analysis. In the rest part of this repository, we will introduce some applications using the GFF3 files for genomic evolution and population genetics studies.

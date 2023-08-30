@@ -23,6 +23,8 @@ conda install -c bioconda minimap2
 In some specific systems, you may need to install python3 separately.
 
 ## 2. Input File Preparation
+Liftoff takes 3 input files. They are: Targeted unannotated genome FASTA file, reference genome FASTA file (from closed-related species), and reference annotation GFF3 file. The reference annotation can be in different form include but not limited to gene annotation, cds annotation, exons annotation, etc.
+
 
 
 ## 3. Sample Run

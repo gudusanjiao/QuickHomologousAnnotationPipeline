@@ -8,8 +8,11 @@ Continuing with the dataset we generated from last step, a GFF3 file.
 > Edited. 08/30/2023. These steps are included in the R scripts.
 
 <del>Firstly, we will filter the data down to only the gene region. If your interest is the exon-per-exon synteny or other types, it is up to your own setting ups. </del>
+
 <del>We filter both the target and the reference annotations. </del>
+
 <del>grep "gene" sexigua.liftoff.gff3 > sexigua.gene.gff3 </del>
+
 <del>grep "gene" Spurpurea_519_v5.1.gene_exons.gff3 > spurpurea.gene.gff3 </del>
 
 Here, we have all the files that ready for the synteny plot. Before we plug in the data into the R code, I would like to discuss the rationale of using only the GFF3 file (without sequence files and alignment) for the synteny map. We annotated the genome using liftoff, where it called minimap2 to align our target genome to the reference for each annotation unit. Thus, each annotation items that identified in the final GFF3 file has passed the critria of the aligner. In other word, each annotation gene names shared between new GFF3 and the reference GFF3 refers to a qualified alignment between target and the reference.
